@@ -17,8 +17,8 @@
 ## 安装
 1. 克隆或下载本项目：
    ```bash
-   git clone <repository-url>
-   cd proxy-scraper
+   https://github.com/baotaobtbt/proxies.git
+   cd proxies
 2. 安装依赖：
 pip install playwright beautifulsoup4 requests
 3. 安装Playwright浏览器：
