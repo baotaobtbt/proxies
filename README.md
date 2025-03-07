@@ -23,19 +23,19 @@
 pip install playwright beautifulsoup4 requests
 3. 安装Playwright浏览器：
 playwright install
-运行脚本：
+## 运行脚本：
 python proxy_scraper.py
 脚本将依次执行以下步骤：
 爬取代理并保存到 proxies.txt
 测试IP可达性并保存到 ok_ping_ip.txt
 验证代理有效性并保存到 ok_daili.txt
 
-输出文件
+## 输出文件
 proxies.txt：爬取到的原始代理列表（格式：IP:PORT）
 ok_ping_ip.txt：通过ping测试的IP列表（格式：IP:PORT）
 ok_daili.txt：最终验证有效的代理列表（格式：IP:PORT）
 
-##注意事项
+## 注意事项
 反爬限制：
 脚本包含随机延迟和User-Agent伪装以减少被封禁的可能性，但仍可能因网站策略变化而失败。
 如果遇到“验证码”或“访问受限”，请暂停使用或调整爬取频率。
@@ -46,7 +46,7 @@ Ping测试使用Windows的 ping 命令（-n 和 -w 参数）。Linux/Mac用户�
 线程数：
 默认使用50个线程进行ping和验证，可根据系统性能调整 max_workers 参数。
 
-##自定义修改
+## 自定义修改
 爬取页数：修改 main() 函数中的 pages = 5。
 目标网站：修改 base_url 为其他代理网站（需调整解析逻辑）。
 测试URL：修改 test_proxy() 中的 http://ipinfo.io/ip 为其他测试地址。
